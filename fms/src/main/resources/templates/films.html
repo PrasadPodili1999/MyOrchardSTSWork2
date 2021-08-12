@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Films Management</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/Films/AddFilms.js"></script>
+<script src="/js/Films/GetFilms.js"></script>
+
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+
+	<div class="container" style="margin: 50px 0 0 0">
+		<button id="add" type="button" class="btn btn-success">Add Film</button>
+		<button id="get" type="button" class="btn btn-success">GetFilms By DirectorName Lead</button>
+		<button id="excel" type="button" class="btn btn-success">Download Excel</button>
+		<div id="deletemsg" style="margin: 10px 0px 10px 0px"></div>
+		<div id="downloadmsg" style="margin: 10px 0px 10px 0px"></div>
+		<!--  --------------------------ADD Film------------------------------------------->
+
+		<div id="addFilm" class="row col-md-6" style="display: none">
+			<h3 style="color: blue">Add Film</h3>
+			<form id="filmForm" name="myForm"
+				style="background-color: #7FA7B0; color: white; padding: 20px 20px 20px 20px">
+				<div class="form-group">
+					<label for="name">Name:</label> <input type="text"
+						class="form-control" id="name" name="Name"
+						placeholder="Enter Name" />
+				</div>
+				<div class="form-group">
+					<label for="boxOfficeCollection">BoxOfficeCollection:</label> <input type="number"
+						class="form-control" id="boxOfficeCollection" name="BoxOfficeCollection"
+						placeholder="Enter BoxOfficeCollection" />
+				</div>
+				<div class="form-group">
+					<label for="rating">Rating:</label> <input type="number"
+						class="form-control" id="rating" name="Rating"
+						placeholder="Enter Rating" />
+				</div>
+				<div class="form-group">
+					<label for="directorId">Director</label>
+					<div id="fig"></div>
+					<button id="addNewDirector">Add New</button>
+				</div>
+				<button type="submit" class="btn btn-default" id="submit">Submit</button>
+
+			</form>
+
+			<div id="postFilmDiv" style="margin: 10px 0px 10px 0px;"></div>
+		</div>
+
+		<!-- ''''''''''''''''''''''''''''''VIEW FILMS'''''''''''''''''''''''''''''''''' -->
+
+		<div id="filmTableId" class="row col-md-6 table-responsive">
+			<h1>FILMS TABLE</h1>
+			<form id="form" name="myForm" 
+				style="background-color: #7FA7B0; color: white; padding: 20px 20px 20px 20px">
+				<div class="form-group">
+					<label for="directorName">DirectorName:</label> <input type="text"
+						class="form-control" id="directorName" name="DirectorName" placeholder="Enter DirectorName" />
+				</div>
+			</form>
+			<table id="filmTable" class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>FilmId</th>
+						<th>Name</th>
+						<th>BoxOfficeCollection</th>
+						<th>Rating</th>
+						<th>Directors</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<div id="resultMsgDiv"></div>
+		</div>
+	</div>
+</body>
+</html>

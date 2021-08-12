@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>MindTree Orchard System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/Tracks/PostTrack.js"></script>
+<script src="/js/Tracks/PutTrack.js"></script>
+<script src="/js/Tracks/GetTrack.js"></script>
+<script src="/js/Tracks/DeleteTrack.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container" style="margin: 50px 0 0 0">
+		<button id="add" type="button" class="btn btn-success">add</button>
+		<button id="get" type="button" class="btn btn-success">get</button>
+		<button id="update" type="button" class="btn btn-success">update</button>
+		<button id="delete" type="button" class="btn btn-danger">delete</button>
+		<div id="deletemsg" style="margin: 10px 0px 10px 0px"></div>
+		<!--  --------------------------ADD------------------------------------------->
+
+
+		<div id="addTrack" class="row col-md-6" style="display: none">
+			<h3 style="color: blue">Add Track</h3>
+			<form id="trackForm"
+				style="background-color: #7FA7B0; color: white; padding: 20px 20px 20px 20px">
+				<div class="form-group">
+					<label for="name">Name:</label> <input type="text"
+						class="form-control" id="name" placeholder="Enter Name" />
+				</div>
+				<div class="form-group">
+					<label for="basedOn">BasedOn:</label> <input type="text"
+						class="form-control" id="basedOn"
+						placeholder="Enter Base Technology" />
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+
+			<div id="postResultDiv" style="margin: 10px 0px 10px 0px;"></div>
+		</div>
+		<!--  --------------------------UPDATE------------------------------------------->
+		<div id="updateTrack" class="row col-md-6" style="display: none">
+			<h3>Here to Edit Info of Track:</h3>
+			<form id="customizedForm"
+				style='background-color: #7FA7B0; color: white; padding: 20px 20px 20px 20px'>
+				<div class="form-group">
+					<label for="updateId">TrackId</label> <input type="number"
+						class="form-control" id="updateId" placeholder="Enter Id"/>
+				</div>
+				<div class="form-group">
+					<label for="updateName">Name:</label> <input type="text"
+						class="form-control" id="updateName" placeholder="Enter Name"/>
+				</div>
+				<div class="form-group">
+					<label for="updateBasedOn">BasedOn:</label> <input type="text"
+						class="form-control" id="updateBasedOn" placeholder="Enter Base Technology"/>
+				</div>
+				<button type="submit" class="btn btn-default">Update</button>
+			</form>
+
+			<div id="putResultDiv" style="margin: 10px 0px 10px 0px;"></div>
+
+		</div>
+		<!--  --------------------------VIEW------------------------------------------->
+
+		<div id="trackTableId" class="row col-md-6 table-responsive">
+
+			<h1>Track Table</h1>
+			<table id="trackTable" class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Name</th>
+						<th>BasedOn</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<div id="resultMsgDiv"></div>
+		</div>
+
+
+	</div>
+</body>
+</html>

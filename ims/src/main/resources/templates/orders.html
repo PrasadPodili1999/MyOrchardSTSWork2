@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Orders Management</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/Orders/AddOrder.js"></script>
+
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container" style="margin: 50px 0 0 0">
+		<button id="add" type="button" class="btn btn-success">Add Order</button>
+		<!--  --------------------------ADD ORDER------------------------------------------->
+
+
+		<div id="addOrder" class="row col-md-6" style="display: none">
+			<h3 style="color: blue">Add Order</h3>
+			<form id="orderForm" name="myForm" 
+				style="background-color: #7FA7B0; color: white; padding: 20px 20px 20px 20px">
+				
+				<div class="form-group">
+					<label for="cId">CustomerId:</label> <input type="number"
+						class="form-control" id="cId" name="CId" placeholder="Enter CustomerId" />
+				</div>
+				<div class="form-group">
+					<label for="sId">StockId:</label> <input type="text"
+						class="form-control" id="sId" name="SId" placeholder="Enter StockId" />
+				</div>
+				<div class="form-group">
+					<label for="productType">ProductType:</label> <input type="text"
+						class="form-control" id="productType" name="ProductType" placeholder="Enter ProductType" />
+				</div>
+				<div class="form-group">
+					<label for="quantity">Quantity:</label> <input type="number"
+						class="form-control" id="quantity" name="Quantity" placeholder="Enter Quantity" />
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+
+			<div id="postOrderDiv" style="margin: 10px 0px 10px 0px;"></div>
+		</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Stock Management</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/Stocks/GetStocks.js"></script>
+<script src="/js/Stocks/GetSpecificStock.js"></script>
+
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container" style="margin: 50px 0 0 0">
+		
+		<button id="getAll" type="button" class="btn btn-success">Get All Stocks</button>
+		<button id="get" type="button" class="btn btn-success">Get By Name</button>
+		
+		
+		<!--  --------------------------VIEW ALL STOCKS------------------------------------------->
+
+		<div id="stockTableId" class="row col-md-6 table-responsive">
+
+			<h1>Stocks Table</h1>
+			<table id="stockTable" class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Productype</th>
+						<th>Price</th>
+						<th>Quantity</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<!--  --------------------------VIEW SPECIFIC STOCK------------------------------------------->
+
+		<div id="specificStockTableId" class="row col-md-6 table-responsive">
+
+			<h1>Stock Specific Details Table</h1>
+			<form id="form" name="myForm" 
+				style="background-color: #7FA7B0; color: white; padding: 20px 20px 20px 20px">
+				<div class="form-group">
+					<label for="productType">ProductType:</label> <input type="text"
+						class="form-control" id="productType" name="ProductType" placeholder="Enter ProductType" />
+				</div>
+			</form>
+			<table id="specificStockTable" class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Productype</th>
+						<th>Price</th>
+						<th>Quantity</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>
